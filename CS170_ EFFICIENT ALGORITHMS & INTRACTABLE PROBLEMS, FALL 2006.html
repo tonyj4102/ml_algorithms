@@ -1,0 +1,790 @@
+<html class="gr__www-inst_eecs_berkeley_edu"><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title> CS170: EFFICIENT ALGORITHMS &amp; INTRACTABLE PROBLEMS, FALL 2006 </title>
+</head>
+
+<body data-gr-c-s-loaded="true">
+
+<font color="#900000" size="+2">
+CS170: EFFICIENT ALGORITHMS &amp; INTRACTABLE PROBLEMS </font><br><br>
+
+<h0>
+INSTRUCTORS: <a href="http://http.cs.berkeley.edu/%7Echristos">Christos Papadimitriou</a>
+(christos AT cs)  &amp; 
+<a href="http://http.cs.berkeley.edu/%7Evazirani">Umesh Vazirani</a>
+(vazirani  AT cs)<br>
+
+LECTURES: MWF 3-4  <br>
+PLACE: 2060 VALLEY LSB <br>
+OFFICE HOURS: Papadimitriou M Th 5-6 pm, 689 Soda. Vazirani M Th 1-2, 671 Soda.<br><br>
+</h0>
+
+<h0>
+TEACHING ASSISTANTS: <br>
+Alexandra Kolla (akolla AT eecs, 587 Soda, 642-3560)<br>
+Lorenzo Orecchia (orecchia AT eecs, 595 Soda, 643-4006)<br>
+Madhur Tulsiani (madhurt AT eecs, 595 Soda, 643-4006)<br><br>
+
+</h0>
+
+<h0>
+DISCUSSION SECTIONS(Final - starting from 10/1):<br>
+Wed 4-5: 310 Soda, Alexandra (10/11 in 405 Soda)
+Th 2-3: 215 Dwinelle, Alexandra.<br>
+Th 3-4: 87 Evans, Madhur.<br>
+Th 4-5: 75 Evans, Madhur.<br>
+<br>
+
+</h0>
+
+
+<h0>
+TA OFFICE HOURS: <br>
+Alexandra: Tu 12-2pm, 551 Soda, starting 9/5<br>
+Lorenzo: Tu 11-12, 511 Soda (alcove)<br>
+Madhur: Th 10:30-12:30, 551 Soda <br><br>
+</h0> 
+
+
+
+<h3>TEXTBOOK</h3>
+The textbook for this course is "Algorithms" by Dasgupta, Papadimitriou &amp; Vazirani. 
+It will not be available at bookstores until about September 15. 
+In the meantime, you can access the material online at 
+<a href="http://www.cs.berkeley.edu/%7Evazirani/algorithms.html">Algorithms</a>
+
+
+<h3>COURSE CALENDAR</h3>
+
+<div align="center">
+<table border="2" cellpadding="2">
+
+<tbody><tr>
+<td></td>
+<td></td>
+<td><b>Topic</b></td>
+<td><b>Readings</b></td>
+</tr>
+
+<tr>
+<td><b>1</b></td>
+
+<td>August 28</td>
+<td> Introduction and overview</td>
+<td>
+Chapter 0
+</td>
+</tr>
+
+<tr>
+<td><b>2,3,4,5</b></td>
+
+<td>August 30, September 1, 6, 8 </td>
+<td>Arithmetic, primality, RSA</td>
+<td>
+Chapter 1.1 - 1.4
+</td>
+</tr>
+
+
+<tr>
+<td><b>6</b></td>
+<td>September 11</td>
+<td>Hashing</td>
+
+<td>
+Chapter 1.5
+</td>
+</tr>
+
+<tr>
+<td><b>7,8&amp;9</b></td>
+<td>September 13, 15, 18</td>
+<td>Divide-and-conquer</td>
+<td>
+Chapter 2.1-2.5
+</td>
+</tr>
+
+<tr>
+<td><b>10&amp;11</b></td>
+<td>September 20, 22</td>
+<td>Fast Fourier transform</td>
+
+<td>
+Chapter 2.5
+</td>
+</tr>
+
+
+<tr>
+<td><b>12,13,14</b></td>
+<td>September 25, 27, 29</td>
+<td>Graph search</td>
+
+<td>
+Chapter 3 
+</td>
+</tr>
+
+
+<tr>
+<td><b>15</b></td>
+<td>October 2</td>
+
+<td>Shortest paths</td>
+<td>
+Chapter 4.1
+</td>
+</tr>
+
+<tr>
+<td><b>15</b></td>
+<td>October 4 </td>
+<td>Midterm 1</td>
+<td>
+
+&nbsp;
+</td>
+</tr>
+
+<tr>
+<td><b>16&amp;17</b></td>
+<td>October 6&amp;9</td>
+<td>Shortest paths (continued)</td>
+<td>
+Chapter 4
+</td>
+</tr>
+
+<tr>
+<td><b>18, 19, 20, 21, 22</b></td>
+<td>October 11, 13, 16, 18 , 20</td>
+<td>Spanning trees and greedy algorithms</td>
+<td>
+Chapter 5
+</td>
+</tr>
+
+
+<tr>
+<td><b>23, 24, 25 </b></td>
+<td>October 23, 25, 27 </td>
+<td>Dynamic programming</td>
+<td>
+Chapter 6
+</td>
+</tr>
+
+<tr>
+<td><b>26, 27</b></td>
+<td> October 30, November 1</td>
+<td>
+Linear Programming
+</td>
+
+<td>
+Chapter 7
+</td>
+</tr>
+
+
+<tr>
+</tr><tr>
+<td></td>
+<td>November 3</td>
+<td>Midterm 2</td>
+<td>
+&nbsp;
+</td>
+</tr>
+
+
+<tr>
+<td><b> 29, 30</b></td>
+<td>November 6, 8 </td>
+<td>
+Linear Programming contd. 
+</td>
+
+<td>
+Chapter 7
+</td>
+</tr>
+
+
+<tr>
+<td><b>31, 32, 33, 34</b></td>
+<td>November 15, 17, 20, 22</td>
+<td>NP-completeness</td>
+<td>
+Chapter 8
+</td>
+</tr>
+
+
+<tr>
+<td><b>35, 36, 37</b></td>
+<td>November 27, 29, December 1 </td>
+<td> Coping with NP-completeness</td>
+<td>
+Chapter 9
+</td>
+</tr>
+
+
+
+
+<tr>
+<td><b>38 &amp;39</b></td>
+<td>December 4 &amp; 6</td>
+<td>Quantum algorithms</td>
+<td>
+Chapter 10
+</td>
+</tr>
+
+
+</tbody></table>
+</div>
+
+<h3>RECENT ANNOUNCEMENTS</h3>
+The grades for the course have been uploaded on bearfacts. The scores
+for the final are available <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/Final.htm">here</a>. <br>
+Have a good break!
+<br><br>
+
+A new list of grades has been uploaded<a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/weblist3.htm"> here
+</a>. It includes all homework/midterm grades. You have until Saturday
+8AM to report any discrepancy with your records.<br><br>
+
+An updated list of grades has been uploaded <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/weblist.htm">here</a>. Grades for HW12, 13, 14 and the "missing" <br>
+HW5's will be uploaded tonight. Please report any discrepancies (not
+regrade requests) by <br>
+Thursday (12/14) night. <br><br> 
+
+<b>Extra office hours before the exam</b><br>
+<ul>
+<li> Tuesday (12/12), 11-1, 511 Soda: Madhur
+</li><li> Wednesday (12/13), 11-1, 511 Soda: Lorenzo
+</li><li> Wednesday (12/13), 1-3, 587 Soda: Alexandra
+</li></ul>
+
+<b>Final Exam Material</b>
+<ul>
+<li><b>Sample Final:</b> <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/final/sp05finalpractice.ps">ps</a>,  <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/final/sp05finalpractice.pdf">pdf</a>. 
+<b>Solutions: <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/final/finalpsol.ps">ps</a>,  <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/final/finalpsol.pdf">pdf</a></b><br>  <br>
+
+</li><li>Here is an actual final from Spring05:  <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/final/sp05final.ps">ps</a>,  <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/final/sp05final.pdf">pdf</a>.<br>
+
+</li><li> Some practice True/False questions: <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/final/FinalTF.ps">ps</a>,  <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/final/FinalTF.pdf">pdf</a>.
+<b>Solutions: <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/final/FinalTFsol.ps">ps</a> <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/final/FinalTFsol.pdf">pdf</a></b> <br> <br>
+
+</li></ul>
+
+<b>Clarification regarding problem 10.3:</b> The problem asks you to compute <br>
+Fourier transform "Modulo M". Please note that this is NOT like <br>
+problem 2.30 where we computed Fourier transform in a finite <br>
+field. For problem 10.3, you are supposed to compute the usual (using <br>
+complex roots of unity) Fourier transform. In this context "Mod M" <br>
+only means the basis states (of which the QFT is a superposition) are <br>
+|0&gt;, |1&gt;, ..., |M-1&gt;. <br><br>
+
+The review session will be held on Monday (12/11) from 5:30 - 7:00 pm
+in 310, Soda Hall.<br><br>
+
+Problem 10.2 for HW14 is cancelled. For problem 10.3, refer to the first
+two paragraphs in section 10.3<br><br>
+
+The final exam is going to be held on Thursday, December 14,
+12.30-3.30 pm, in 10 Evans. A review session will be held on Monday,
+time and location TBD.<br><br>
+
+
+Problem 8.13(e) for HW-13 has been made optional<br><br>
+
+Problems 9.2, 9.3 added to HW-13. An additional hint for problem 8.13
+has also been added. <br><br>
+
+A list with all grades recorded so far has been uploaded to <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/weblist.htm"> this page</a>.
+The leftmost column contains the sudent's SID number, mod 164617. 
+<h3>HOMEWORKS</h3>
+All homeworks are due <b>Friday at 4:00pm</b> unless otherwise stated.
+Turn in your homeworks in the box labeled "CS170" on the 2nd
+floor of Soda Hall.  <i>Please begin your answer to each problem on a new
+sheet of paper.</i>  Please ensure that each sheet is
+labeled with your name, SID number, <i>section number</i>, and "CS170--Fall 2006".
+<i> You risk receiving no credit for any homework submitted without
+this information.</i> 
+Please take the time to write clear and concise solutions; we will
+not grade messy or unreadable submissions.
+The lowest two homework scores will be dropped.
+No late homeworks will be accepted.
+<br>
+<ul> 
+
+<li>
+<b> Homework 1 </b> Problems 0.1, 0.4; 1.4, 1.5 from the book. <b>Due
+9/1</b>.  In Problem 0.4(e), assume that M(n) = n^c for some
+constant c. <br>
+<b> Solutions </b> <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol1.ps"> ps</a>, <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol1.pdf"> pdf</a>
+<br>
+
+</li> 
+
+<li>
+<b> Homework 2 </b> Problems 1.19, 1.20, 1.21, 1.26, 1.34, 1.39 from the book. 
+And the following problem:<br>[<b>This problem has been postponed to next week</b>:]
+You wish to pick a random 100 digit prime number.
+You pick a 100 digit number at random, use a probabilistic test for primality
+and output if the algorithm says prime. Let's analyze
+this algorithm:
+<br>
+a) Roughly how many 100 digit numbers are prime.
+A rough estimate,
+within say 1%, is acceptable for this and the subsequent parts of this question. 
+<br>
+b) Suppose your primality test gives the wrong answer with
+probability 1/1000. What is the chance that your algorithm
+mistakenly outputs a composite instead of a prime? 
+<br>
+c) Suppose you want the chance of erroneously outputing a
+composite to be less than one in a thousand. How small
+should the error probability on your primality test be?
+<b>Due
+9/8</b>.  <br>
+<b>Solutions </b> <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol2.ps"> ps</a>, <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol2.pdf"> pdf</a>
+<br>
+
+</li>
+
+<li><b>Homework 3</b> Problems 1.28, 1.37, 1.44, 1.45, 1.46 and the
+problem above postponed from homework 2. <i>Addition: Problem 2.4</i>.
+<b> Due 9/15</b>
+<br> <b>Solutions </b> <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol3.ps"> ps</a>, <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol3.pdf"> pdf</a>
+<br>
+
+</li>
+
+
+
+<li><b>Homework 4</b> Problems 2.5, 2.25, 2.27, 2.7, 2.8(a), 2.9(a) 
+<b> Due 9/22</b>  
+<br> <b>Solutions </b> <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol4.ps"> ps</a>, <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol4.pdf"> pdf</a>
+<br>Also solve the following additional "problem".<br>
+<b>HW4 - Additional Problem (5 points just for giving an answer!)</b>
+
+Please write the answer on a separate sheet and attach it with your
+homework. Do not write your name on this sheet - we shall take these
+off before reading them (Just write the appropriate option for
+multiple choice questions). <br>
+
+Please feel free to write any other suggestions/comments/crtiticisms
+that you may have. <br>
+
+1)<i> The pace of the course is:</i><ul>
+  <li>  a) Speed of light (very fast) </li>
+  <li>  b) A bit too fast </li>
+  <li>  c) Close to my pace </li>
+  <li>  d) A bit too slow </li>
+  <li>  e) I sleep in the lectures </li>
+</ul><br>
+2) <i>How challeging do you find the material covered in class?</i><ul>
+   <li> a) Rocket science</li>
+   <li> b) Fairly challenging</li>
+   <li> c) Just right</li>
+   <li> d) I did this in kindergarden</li>
+</ul><br>
+3)<i> The sections/office hours are:</i><ul>
+<li>    a) Very helpful</li>
+<li>    b) Useful at times</li>
+<li>    c) Pointless</li>
+<li>    d) What sections?</li>
+</ul><br>
+4)<i> The homeworks are:</i> <ul>
+<li>    a) Akin to Roman methods of torture</li>
+<li>    b) Challenging, but help understand the material</li>
+<li>    c) Challenging but useless</li>
+<li>    d) Of reasonable difficulty</li>
+<li>    e) Could be more difficult</li>
+</ul><br>
+5) <i>Give two suggestions for making the sections/office hours more
+helpful.</i>
+<br>
+6) <i>Give two suggestions for making the lectures better.</i>
+</li> 
+<br> 
+<br>
+
+<li><b>Homework 5</b> Problems 2.30, 3.1, 3.2(b), 3.8, 3.11, 3.26.
+<b> Due 9/29</b> 
+<br> <b>Solutions </b> <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol5.ps"> ps</a>, <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol5.pdf"> pdf</a><br>
+
+</li><li><b>Homework 6</b> Problems 3.5, 3.19, 3.20, 3.24.
+<b> Due 10/6</b>
+<br> <b>Solutions </b> <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol6.ps"> ps</a>, <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol6.pdf"> pdf</a><br>
+
+</li><li><b>Homework 7</b> Problems 3.28, 4.5, 4.7, 4.13, 4.21.
+<b> Due 10/13</b>
+<br> <b>Solutions </b> <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol7.ps"> ps</a>, <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol7.pdf"> pdf</a><br>
+
+
+</li><li><b>Homework 8</b> Problems 5.3,5.9,5.14,5.19,5.21,5.28,6.2
+<b> Due 10/20</b><br>  <b>Solutions </b> <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol8.ps"> ps</a>, <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol8.pdf"> pdf</a><br>
+
+<b>Note that the above numbers are according to the printed version of
+the book. <br>The numbers according to the online version are 5.3, 5.9,
+5.14, 5.19, 5.20, 5.27, 6.2</b><br>
+
+</li><li><b>Homework 9</b> Problems 6.4, 6.6, 6.7, 6.8, 6.14
+<b> Due 10/27</b><br>  <b>Solutions </b> <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol9.ps"> ps</a>, <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol9.pdf"> pdf</a><br>
+
+</li><li><b>Homework 10</b> Problems 6.17, 6.18, 6.21, 7.1, 7.16
+<b> Due 11/3 </b><br>  <b>Solutions </b> <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol10.ps"> ps</a>, <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol10.pdf"> pdf</a><br>
+
+
+</li><li><b>Homework 11</b> Problems 7.7, 7.11, 7.13, 7.17, 7.18, 7.31
+<b> Due 11/13 (Monday) </b><br>   <b>Solutions </b> <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol11.ps"> ps</a>, <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol11.pdf"> pdf</a><br>
+
+
+</li><li><b>Homework 12</b> Problems 7.14, 7.22, 8.1, 8.2, 8.5, 8.6. And
+the following problem:<br>
+Suppose that we add to the LP in figure 7.2 the constraint x1 + x2 +
+x3 &gt;=200.<br>
+Solve the new LP, and show your work in the same detail as Figure
+7.13. Since (0,0,0) is no longer feasible, you must start by finding a
+corner, as described in Section 7.6.3. <br>
+Also, to avoid degeneracy you must perturb the equation x1+x2+x3 &lt;=
+400, perhaps to x1+x2+x3 &lt;=401, but then you must adjust the final
+result. <b> Due 11/20 (Monday again)</b>  
+<b>Solutions </b> <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol12.ps"> ps</a>, <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol12.pdf"> pdf</a><br>
+
+
+</li><li><b>Homework 13</b> Problems 8.10, 8.12, 8.13 and Problems 9.2, 9.3
+<b>Due 12/1</b> <br>
+(Additional hint for 8.13: The one proof of NP-Completeness that is
+not by generalization, can be done by a reduction from DOMINATING-SET)<br>
+<b>Note:</b> Part (e) for problem 8.13 is optional<br>
+<b>Solutions </b> <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol13.ps"> ps</a>, <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol13.pdf"> pdf</a><br>
+
+
+</li><li><b>Homework 14</b> Problems 9.1, 9.4, 10.1, 10.2, 10.3
+<b>Due 12/8</b> <br>
+<b>Note:</b> Problem 10.2 in cancelled. For 10.3, refer to first two
+paragraphs of section 10.3<br>Also see clarification regarding problem
+10.3 in the announcements section.<br>
+<b>Solutions </b> <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol14.ps"> ps</a>, <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/hw/sol14.pdf"> pdf</a><br>
+
+
+<h3>HANDOUTS</h3>
+Handout 1<a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/handouts/handout1.pdf">[pdf]</a>  
+Solutions <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/handouts/handout1-sol.pdf">[pdf]</a> <br><br>
+
+Handout 2<a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/handouts/handout2.pdf">[pdf]</a>
+Solutions <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/handouts/handout2-sol.pdf">[pdf]</a><br><br>
+
+Handout 3<a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/handouts/handout3.pdf">[pdf]</a>
+Solutions <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/handouts/handout3-sol.pdf">[pdf]</a><br><br>
+
+Handout 4<a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/handouts/handout4.pdf">[pdf]</a>
+Solutions <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/handouts/handout4-sol.pdf">[pdf]</a><br><br>
+ 
+Handout 5<a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/handouts/handout5.pdf">[pdf]</a>
+Solutions <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/handouts/handout5-sol.pdf">[pdf]</a><br><br>
+
+Handout 6<a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/handouts/handout6.pdf">[pdf]</a>
+Solutions <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/handouts/handout6-sol.pdf">[pdf]</a><br><br>
+
+Handout 7<a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/handouts/handout7.pdf">[pdf]</a>
+Solutions <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/handouts/handout7sol.pdf">[pdf]</a><br><br>
+
+Handout 8<a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/handouts/handout8.pdf">[pdf]</a>
+Solutions <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/handouts/handout8sol.pdf">[pdf]</a><br><br>
+
+Handout 9<a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/handouts/handout9.pdf">[pdf]</a>
+Solutions <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/handouts/handout9-sol.pdf">[pdf]</a><br><br>
+
+Handout 10<a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/handouts/handout10.pdf">[pdf]</a>
+Solutions <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/handouts/handout10-sol.pdf">[pdf]</a><br><br>
+
+
+<br><br>
+
+
+<h4>MIDTERM 1 MATERIAL</h4>
+
+<ul>
+<li> Midterm <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/m1.pdf">pdf</a> <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/m1.ps">ps</a> 
+</li><li> Midterm Solutions  <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/midsol.pdf">pdf</a> <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/midsol.ps">ps</a>
+</li><li> Sample Midterm  <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/mid1p.pdf">pdf</a> <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/mid1p.ps">ps</a>
+</li><li> Sample Midterm Solutions  <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/mid1ps.pdf">pdf</a> <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/mid1ps.ps">ps</a>
+
+</li></ul>
+
+<h4>MIDTERM 2 MATERIAL</h4>
+
+<ul>
+<li> Midterm <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/m2.ps">ps</a> 
+</li><li> Midterm Solutions  <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/m2-sol.pdf">pdf</a> <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/m2-sol.ps">ps</a>
+</li><li> Sample Midterm <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/m2sample.pdf">pdf</a> <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/m2sample.ps">ps</a> Solutions <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/m2sample-sol.pdf"> pdf</a>, <a href="http://www-inst.eecs.berkeley.edu/%7Ecs170/fa06/exams/m2sample-sol.ps"> ps</a>
+</li></ul>
+
+<!--
+    Solutions  <a href="sol1.ps">[ps]</a>
+               <a href="sol1.pdf">[pdf]</a>
+               <a href="sol1.tex">[latex]</a>
+!-->
+</li> 
+<!--
+<LI>Homework 2 <a href="ex2.ps">[ps]</a>
+
+               <a href="ex2.pdf">[pdf]</a> (due 2/2).
+    Solutions  <a href="sol2.ps">[ps]</a>
+               <a href="sol2.pdf">[pdf]</a>
+</LI> 
+
+<LI>Homework 3 <a href="ex3.ps">[ps]</a>
+               <a href="ex3.pdf">[pdf]</a> (due 2/9).
+    Solutions  <a href="sol3.ps">[ps]</a>
+
+               <a href="sol3.pdf">[pdf]</a>
+</LI> 
+
+<LI>Homework 4 <a href="ex4.ps">[ps]</a>
+               <a href="ex4.pdf">[pdf]</a> (due 2/16).
+    Solutions  <a href="sol4.ps">[ps]</a>
+               <a href="sol4.pdf">[pdf]</a>
+</LI> 
+
+
+<LI>Homework 5 <a href="ex5.ps">[ps]</a>
+               <a href="ex5.pdf">[pdf]</a> (due 2/23).
+    Solutions  <a href="sol5.ps">[ps]</a>
+               <a href="sol5.pdf">[pdf]</a>
+</LI> 
+
+<LI>Midterm 1 Solutions <a href="mid1sol.ps">[ps]</a>
+               <a href="mid1sol.pdf">[pdf]</a>. 
+
+</LI> 
+
+<LI>Homework 6 <a href="ex6.ps">[ps]</a>
+               <a href="ex6.pdf">[pdf]</a> (due 3/9).
+    Solutions  <a href="sol6.ps">[ps]</a>
+               <a href="sol6.pdf">[pdf]</a>
+</LI> 
+
+<LI>Homework 7 <a href="ex7.ps">[ps]</a>
+
+               <a href="ex7.pdf">[pdf]</a> (due 3/16).
+    Input for Q1  <a href="turing.txt">[text]</a>.
+    Solutions  <a href="sol7.ps">[ps]</a>
+               <a href="sol7.pdf">[pdf]</a>
+    Code for Q1(b) <a href="PrettyPrint.java">[java]</a>
+    Output for Q1(b) <a href="PPoutput.txt">[text]</a>
+
+</LI> 
+
+<LI>Homework 8 <a href="ex8.ps">[ps]</a>
+               <a href="ex8.pdf">[pdf]</a> (due 3/23).
+    Solutions  <a href="sol8.ps">[ps]</a>
+               <a href="sol8.pdf">[pdf]</a>
+</LI> 
+
+<LI>Homework 9 <a href="ex9.ps">[ps]</a>
+
+               <a href="ex9.pdf">[pdf]</a> (due 4/6).
+    Solutions  <a href="sol9.ps">[ps]</a>
+               <a href="sol9.pdf">[pdf]</a>
+</LI> 
+
+<LI>Midterm 2 Solutions <a href="mid2sol.ps">[ps]</a>
+               <a href="mid2sol.pdf">[pdf]</a>. 
+</LI> 
+
+
+<LI>Homework 10 <a href="ex10.ps">[ps]</a>
+               <a href="ex10.pdf">[pdf]</a> (due 4/27).
+    Solutions  <a href="sol10.ps">[ps]</a>
+               <a href="sol10.pdf">[pdf]</a>
+</LI> 
+
+<LI>Homework 11 <a href="ex11.ps">[ps]</a>
+               <a href="ex11.pdf">[pdf]</a> (due 5/4).
+    Solutions  <a href="sol11.ps">[ps]</a>
+
+               <a href="sol11.pdf">[pdf]</a>
+</LI> 
+
+<BR>
+!-->
+</ul>
+<br>
+
+
+<h3>EXAMS</h3>
+There will be two midterms and one final.  Dates and other details
+will be announced in due course.<br><br>
+
+<h3>QUIZZES</h3>
+There will be a short quiz at the beginning of class on randomly selected
+dates.  The quiz will consist of a small number of very simple questions
+related to the material of the previous class.  The two lowest quiz scores
+will be dropped.  The motivation for the 
+quizzes is twofold: (1) to encourage you to review the material of each
+class before the next class; (2) to encourage on-time arrival at lectures.<br><br>
+
+<h3>ASSESSMENT</h3>
+
+Your grade in the class will be determined as follows:
+Homeworks 25%; Midterms 20% each; Final 30%; Quizzes 5%.
+<br><br>
+
+<h3>COURSE POLICIES</h3>
+<b>Prerequisites:</b> Formal prerequisites are CS61B and either CS70 or Math55.  
+In particular, you should be comfortable with mathematical induction, 
+big-O notation, basic data structures and binary heaps.  If you need to refresh
+any of this background, you should refer to the relevant portions of the book. 
+It is also assumed that you have experience with programming in a standard imperative
+language such as C, C++ or Java.  Although most homeworks will be pencil-and-paper
+exercises, you may also be expected to do some small programming assignments.
+<br><br>
+
+<!--
+<b>Readings:</b> Lecture notes will be posted on this web page on or before
+the day of the relevant class; most of these notes are draft chapters of
+a book in preparation by Sanjoy Dasgupta, Christos Papadimitriou and Umesh Vazirani.
+For additional background and examples, it is recommended that students consult the book 
+<i><a href="http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&amp;tid=8569">
+Introduction to Algorithms</a></i>, by Cormen, Leiserson, Rivest and Stein,
+Second Edition, MIT Press, 2001 (which we shall refer to as CLRS).  
+Pointers to the relevant sections of this book will also be provided as we go along.
+<BR><BR>
+!-->
+
+<b>Contact Information:</b> The instructor and TAs will post announcements, 
+clarifications, hints, etc. to this website and/or to the class newsgroup,
+<a href="news:ucb.class.cs170">ucb.class.cs170</a>.
+Hence you must check this website and the newsgroup frequently throughout the
+semester.  For information on how to access UCB newsgroups, go 
+<a href="http://inst.eecs.berkeley.edu/connecting.html#news">here</a> 
+(see also <a href="http://inst.eecs.berkeley.edu/usr/pub/news.help">here</a> 
+for more).
+
+<p>If you have a question, your best option is to post a message to the 
+newsgroup.  The staff (instructor and TAs) will check the newsgroup regularly, 
+and if you use the newsgroup, other students will be able to help you too.
+When using the newsgroup, please avoid off-topic discussions, and
+please do not post answers to homework questions before the homework
+is due.
+
+</p><p>If your question is personal or not of interest to other students,
+you may send email to cs170@cory.eecs.  Email to this address is
+forwarded to the instructor and all TAs.  We prefer that you use this
+address, rather than directly emailing the instructor and/or your TA.
+If you wish to talk with one of us individually, you are welcome to
+come to our office hours.  If the office hours are not convenient, you
+may make an appointment with any of us by email.  Please reserve email 
+for the questions you can't get answered in office hours, in discussion 
+sections, or through the newsgroup.
+
+</p><p>In a class this large, it can be challenging for the instructor to
+gauge how smoothly the class is going.  We always welcome any feedback
+on what we could be doing better.  If you would like to send anonymous
+comments or criticisms, please feel free to use an anonymous remailer
+like <a href="http://www.gilc.org/speech/anonymous/remailer.html">this
+one</a> to avoid revealing your identity.
+
+<br><br>
+
+<b>Collaboration:</b> You are encouraged to work on homework problems in study 
+groups of two to four people; however, you <b>must</b> write up the solutions 
+on your own, and you must <b>never</b> read or copy the solutions of other students.
+Similarly, you may use books or online resources to help solve homework problems, 
+but you <b>must</b> credit all such sources in your writeup and you must
+<b>never</b> copy material verbatim.
+
+
+<b>Warning:</b> Your attention is drawn to the Department's 
+<a href="http://www.eecs.berkeley.edu/Policies/acad.dis.shtml"> 
+Policy on Academic Dishonesty</a>.
+In particular, you should be aware that
+copying solutions, in whole or in part, from other
+students in the class <i>or any other source</i> without acknowledgment
+constitutes cheating.  Any student found to be cheating risks automatically
+failing the class and being referred to the Office of Student Conduct.
+<br><br>
+
+<b>Regrading Policies:</b> 
+Regrading of homeworks or exams will only be undertaken in cases where
+you believe there has been a genuine error or misunderstanding.
+Bear in mind that our primary aim in grading is consistency, so that
+all students are treated the same; for this reason, we will not adjust 
+the score of one student on an issue of partial credit unless the score 
+allocated clearly deviates from the grading policy we adopted for that 
+problem.  If you wish to request a regrading of a homework or exam, you 
+must return it to your section TA with a written note on a separate piece
+of paper explaining the problem.  The entire assignment may be regraded, 
+so be sure to check the solutions to confirm that your overall score will 
+go up after regrading.  All such requests must be received within one
+week from the date on which the homework or exam was made available for
+return.
+
+
+<br><br>  
+</p><h3>SOME HELPFUL HINTS</h3>
+
+The following tips are offered based on our experience with Upper Division 
+classes in CS Theory.  If you follow these guidelines, you will make life 
+much easier for yourself in this class.
+
+<p><b>1. Don't fall behind!</b>  In a conceptual class such as this, it is
+particularly important to maintain a steady effort throughout the semester,
+rather than hope to cram just before homework deadlines or exams.
+This is because it takes time and practice for the ideas to sink in.
+Make sure you allocate a sufficient number of hours every week to the
+class, including enough time for reading and understanding the material
+as well as for doing assignments.  (As a rough guide, you should expect to
+do at least one hour of reading and two hours of problem solving for each
+hour of lecture.)  Even though this class does not have
+any major projects, you should plan to spend as much time on it as on
+any of your other Upper Division technical classes.
+
+</p><p><b>2. Take the homeworks seriously!</b>  The homeworks are explicitly designed
+to help you to learn the material as you go along.  Although the numerical weight 
+of the homeworks is not huge, there is usually a strong correlation between homework 
+scores and final grades in the class.  Also, regardless of how well you did on
+the homework, <i>read the sample solutions</i>, even for the problems you got
+right.  You may well learn a different way of looking at the problem, and you
+may also benefit from emulating the style of the solutions.
+(In science people learn a lot from emulating the approach of more
+experienced scientists.)
+
+</p><p><b>3. Make use of office hours!</b>  The instructor and TAs hold office hours
+expressly to help you.  It is often surprising how many students do not take 
+advantage of this service.  You are free to attend as many office hours as you 
+wish (you are not constrained just to use the office hours of your section
+TA).  You will also likely get more out of an office hour if you have spent a 
+little time in advance thinking about the questions you have, and formulating
+them precisely.  (In fact, this process can often lead you to a solution yourself!)
+
+</p><p><b>4. Take part in discussion sections!</b>  Discussion sections are <b>not</b>
+
+auxiliary lectures.  They are an opportunity for interactive learning, through
+guided group problem solving and other activities.  The success of a discussion
+section depends largely on the willingness of students to participate actively in it.
+As with office hours, the better prepared you are for the discussion, the more
+you are likely to get out of it.
+
+</p><p><b>5. Form study groups!</b>  As stated above, you are encouraged to form
+small groups (two to four people) to work together on homeworks and on understanding
+the class material on a regular basis.  In addition to being fun, this can save you 
+a lot of time by generating ideas quickly and preventing you from getting hung up 
+on some point or other.  Of course, it is your responsibility to
+ensure that you contribute actively to the group; passive listening will likely
+not help you much.  And recall the caveat above that you <b>must</b> write up
+your solutions  on your own.
+
+
+
+</p></body></html>
